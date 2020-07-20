@@ -44,7 +44,10 @@ module.exports = {
       description: "Builds the app into the dist directory",
     },
     test: {
-      script: series("nps banner.test"),
+      script: series(
+        "nps banner.test",
+        "nyc mocha --require ts-node/register"
+        ),
       description: "Runs unit tests",
     },
     lint: {
