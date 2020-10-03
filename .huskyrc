@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "nps test && nps lint",
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-  }
-}
