@@ -1,20 +1,11 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-export function bar() {
-  if (true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+import express from "express";
+const app = express();
+const port = 8080;
 
-export async function barAsync() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (true) {
-        resolve(true);
-      } else {
-        resolve(false);
-      }
-    }, 1000);
-  });
-}
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
